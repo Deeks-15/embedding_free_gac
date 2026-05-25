@@ -5,12 +5,14 @@ retrieval system where the hot path uses **zero embeddings and zero cosine
 similarity**. All routing is deterministic (term-based / regex-based);
 ranking is BM25 + recency + level + keyword overlap.
 
+> 📄 **Whitepaper:** [github.com/Deeks-15/embedding_free_gac_whitepaper](https://github.com/Deeks-15/embedding_free_gac_whitepaper) — the 21-page GAC technical paper (Part I architecture + Part II empirical proof) this pilot accompanies.
+
 This is the architecture the GAC whitepaper §3 actually claims:
 > *"Retrieval itself never performs semantics again."*
 
 For the **softened embedding-based variant** (everything else of the pilot,
 including the §12 tuning attribution that did not generalize), see the sibling
-repo [publish_bounded_ann](../publish_bounded_ann/).
+repo [github.com/Deeks-15/bounded_ann](https://github.com/Deeks-15/bounded_ann).
 
 ## What's in this repo
 
