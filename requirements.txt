@@ -1,0 +1,34 @@
+# Python deps for embedding-free GAC pilot (DrainGAC + DocGAC)
+# Tested with Python 3.12
+#
+# IMPORTANT: the DrainGAC and DocGAC implementations themselves have NO
+# neural-network dependencies — only Drain3 (regex log parser) and YAKE
+# (statistical keyword extraction). The sentence-transformers + numpy +
+# chromadb deps below are for the RAG BASELINE we compare against, not
+# for GAC itself.
+
+# === GAC core (deterministic, no neural net) ===
+drain3>=0.9       # log template extraction (regex-based)
+yake>=0.7         # keyword extraction (statistical, no neural net)
+networkx>=3.0     # adjacency graph
+
+# === RAG baseline (for comparison only) ===
+sentence-transformers>=5.0
+numpy>=2.0
+chromadb>=1.5
+scikit-learn>=1.8
+
+# === Document extraction (only for doc-corpus build) ===
+pymupdf>=1.27
+pypdf>=6.0
+python-pptx>=1.0
+beautifulsoup4>=4.14
+lxml>=6.0
+html2text>=2025.4
+
+# === LLM (judge only — never on the hot path) ===
+google-genai>=1.75
+
+# === Charts + misc ===
+matplotlib>=3.10
+pandas>=2.3

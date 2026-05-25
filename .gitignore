@@ -1,0 +1,38 @@
+# secrets
+.env
+.env.local
+
+# caches + intermediates
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+chroma_db/
+streaming_chroma/
+tuned_chroma/
+data/phase1_cache/
+data/phase2_cache/
+data/streaming_chroma/
+data/chroma_db/
+data/log_chroma/
+data/log_gac_index.json
+data/log_chunk_embs.npy
+data/log_chunks.jsonl
+data/gac_index.json
+data/chunk_embs.npy
+*.npy
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# tmp logs (developers' local)
+/tmp/
+*.log
+!logs/realistic.log
+!logs/realistic_b.log
+
+# embedding-free specific
+data/phase3_cache/
+data/phase4_cache/
